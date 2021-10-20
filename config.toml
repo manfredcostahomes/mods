@@ -7,8 +7,8 @@ relativeURLs = true
 path = "github.com/manfredcostahomes/property"
 
   [[module.imports.mounts]]
-  source = "property/content"
-  target = "content"
+  source = "/content"
+  target = "/content"
 
 
 [taxonomies]
