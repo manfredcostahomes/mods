@@ -1,5 +1,5 @@
 baseurl = "/"
-host = "https:/www.manfredcostahomes.com"
+host = "https:/mods.pages.dev"
 title = "Manfred Costa Blanca Homes"
 relativeURLs = true
 
@@ -7,8 +7,8 @@ relativeURLs = true
     path="github.com/manfredcostahomes/property"
     disabled=false
 [[module.imports.mounts]]
-    source=""
-    target="contents/property"
+    source="contents/"
+    target="contents/"
 
 [taxonomies]
   home = "homes"
