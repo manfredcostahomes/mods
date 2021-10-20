@@ -3,12 +3,12 @@ host = "https:/mods.pages.dev"
 title = "Manfred Costa Blanca Homes"
 relativeURLs = true
 
-module:
-  imports:
-   - path: github.com/manfredcostahomes/property
-     mounts:
-     - source: contents
-       target: contents
+[[module.imports]]
+path = "github.com/manfredcostahomes/property"
+
+  [[module.imports.mounts]]
+  source = "contents"
+  target = "contents"
 
 
 [taxonomies]
