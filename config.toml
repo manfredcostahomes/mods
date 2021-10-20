@@ -1,0 +1,18 @@
+baseurl = "/"
+host = "https:/www.manfredcostahomes.com"
+title = "Manfred Costa Blanca Homes"
+relativeURLs = true
+
+
+
+[taxonomies]
+  home = "homes"
+
+[outputs]
+    page = ["json","html"]
+    section = ["json"] 
+    home = ["json","html"]
+    contact = ["html"]
+    policy = ["html"]
+
+

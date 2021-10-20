@@ -1,0 +1,66 @@
+<!--<div class="columns is-mobile is-marginless">
+        <div class="column left" title="Manfred Costa Homes">
+            <a href="/"><figure class="navbar-item image">
+                <img src="/img/logotext.svg" style="max-height: 6rem; width:5rem" alt="manfred costa homes"/>
+            </figure></a>
+            <p class="navbar-item has-text-black is-uppercase ">Resale Homes </p>
+            <p class="navbar-item has-text-black is-uppercase">New Homes </p>
+            <p class="navbar-item has-text-black is-uppercase">Contact </p>
+        </div>
+
+</div> -->
+<header class="zeader">
+  <nav class="navbar sticky">
+    <div class="container">
+      <div class="navbar-brand">
+            <a href="/"><figure class="navbar-item image">
+                    <img src="/img/mch-logo-wide-40.svg" style="max-height: 20rem;" alt="manfred costa homes"/>
+                </figure></a>
+        <span class="navbar-burger burger" data-target="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+        </span>
+      </div>
+      <div id="navMenu" class="navbar-menu {{ .Permalink }}">
+        <div class="navbar-end">
+          <a href="/homes/resale" class="navbar-item has-text-black is-uppercase ">Resale Homes</a>
+          <a href="/homes/new-build" class="navbar-item has-text-black is-uppercase ">New Homes</a>
+          <a href="/contact/index.html" class="navbar-item has-text-black is-uppercase ">Contact</a>
+          {{ $myVar := ""}}
+          {{ if (isset .Params "deslug" ) }}
+          {{ $lowerdeslug := lower .Params.deslug }}
+          <a href='https://de.manfredcostahomes.com{{ $lowerdeslug }}' class="navbar-item has-text-black is-uppercase paramsdeslug"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          {{ else if (in .Permalink "new-build") }}
+          <a href='https://de.manfredcostahomes.com/hauser/neubau' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          {{ else if (in .Permalink "resale") }}
+          <a href='https://de.manfredcostahomes.com/hauser/gebraucht' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          {{ else if (in .Permalink "contact") }}
+          <a href='https://de.manfredcostahomes.com/kontact/index.html' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>                                    
+          {{ else if (in .Permalink "index.json") }}
+          <a href='https://de.manfredcostahomes.com' class="navbar-item has-text-black is-uppercase indexjson"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          {{ else }}
+          {{if (in .Permalink "homes") }}
+             {{ $myVar = replace .Permalink "homes" "hauser"  }}
+             {{ $myVar = replace $myVar "costa-blanca-south" "costa-blanca-sud"  }}
+             {{ $myVar = strings.TrimRight "/" $myVar  }}
+          {{end}}
+          <a href='https://de.manfredcostahomes.com{{ $myVar }}' class="navbar-item has-text-black is-uppercase else"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          {{ end }}<!-- <span class="{{ replace .Permalink "homes" "hauser" }} ting-{{ $myVar }} {{ .Permalink }}"></span>-->
+         
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script type="text/javascript">
+    (function() {
+      var burger = document.querySelector('.burger');
+      var nav = document.querySelector('#'+burger.dataset.target);
+
+      burger.addEventListener('click', function(){
+        burger.classList.toggle('is-active');
+        nav.classList.toggle('is-active');
+      });
+    })();
+  </script>
+</header>
