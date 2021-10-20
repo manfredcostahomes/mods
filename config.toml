@@ -8,7 +8,7 @@ path = "github.com/manfredcostahomes/property"
 
   [[module.imports.mounts]]
   source = "property/content"
-  target = "/opt/buildhome/repo/content"
+  target = "/content"
 
 
 [taxonomies]
