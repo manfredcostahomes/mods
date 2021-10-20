@@ -7,7 +7,7 @@ relativeURLs = true
 path = "github.com/manfredcostahomes/property"
 
   [[module.imports.mounts]]
-  source = "content"
+  source = "property/content"
   target = "content"
 
 
