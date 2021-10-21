@@ -30,22 +30,22 @@
           {{ $myVar := ""}}
           {{ if (isset .Params "deslug" ) }}
           {{ $lowerdeslug := lower .Params.deslug }}
-          <a href='https://de.manfredcostahomes.com{{ $lowerdeslug }}' class="navbar-item has-text-black is-uppercase paramsdeslug"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          <a href='https://de.manfredcostahomes.com{{ $lowerdeslug }}' class="navbar-item has-text-black is-uppercase paramsdeslug"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16-e90"/> Deutsch</a>
           {{ else if (in .Permalink "new-build") }}
-          <a href='https://de.manfredcostahomes.com/hauser/neubau' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          <a href='https://de.manfredcostahomes.com/hauser/neubau' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16-e90"/> Deutsch</a>
           {{ else if (in .Permalink "resale") }}
-          <a href='https://de.manfredcostahomes.com/hauser/gebraucht' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          <a href='https://de.manfredcostahomes.com/hauser/gebraucht' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16-e90"/> Deutsch</a>
           {{ else if (in .Permalink "contact") }}
-          <a href='https://de.manfredcostahomes.com/kontact/index.html' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>                                    
+          <a href='https://de.manfredcostahomes.com/kontact/index.html' class="navbar-item has-text-black is-uppercase"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16-e90"/> Deutsch</a>                                    
           {{ else if (in .Permalink "index.json") }}
-          <a href='https://de.manfredcostahomes.com' class="navbar-item has-text-black is-uppercase indexjson"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          <a href='https://de.manfredcostahomes.com' class="navbar-item has-text-black is-uppercase indexjson"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16-e90"/> Deutsch</a>
           {{ else }}
           {{if (in .Permalink "homes") }}
              {{ $myVar = replace .Permalink "homes" "hauser"  }}
              {{ $myVar = replace $myVar "costa-blanca-south" "costa-blanca-sud"  }}
              {{ $myVar = strings.TrimRight "/" $myVar  }}
           {{end}}
-          <a href='https://de.manfredcostahomes.com{{ $myVar }}' class="navbar-item has-text-black is-uppercase else"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16"/> Deutsch</a>
+          <a href='https://de.manfredcostahomes.com{{ $myVar }}' class="navbar-item has-text-black is-uppercase else"><img src="//lh3.googleusercontent.com/kEyBIAzDf4lJtEXKBQyEqsnEgvyaNboEl_4vNL6ZWv_LYJ9P67G6zn3wjq6QGwtho6qjKADDviJW76Ul=s16-e90"/> Deutsch</a>
           {{ end }}<!-- <span class="{{ replace .Permalink "homes" "hauser" }} ting-{{ $myVar }} {{ .Permalink }}"></span>-->
          
         </div>
